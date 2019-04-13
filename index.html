@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HackingGame</title>
+    <link rel="stylesheet" type="text/css" href="css/myStyle.css">
+
+</head>
+<body>
+    <div id="intro">
+        <p>You have 1000 credits on start.</p>
+        <p>Each failed try costs 100 credits, inaccurate try - 50 credits.</p>
+        <p>Do not worry. Rules are easy and you will get them quickly.</p>
+        <button onclick="start()">Got it</button>
+    </div>
+
+<script src="js/myScript.js"></script>
+
+    <form name="keypad" id="keypad" class="blocks" style="display:none;">
+        <table>
+            <tr>
+                <td>
+                    <input type="button" name="input" class="display" onclick="inputNum(value)">
+                    <div id="credits">1000</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="buttons" OnClick="keypad.input.value = value">
+                    <input type="button" name="one" value="1" OnClick="keypad.input.value = value">
+                    <input type="button" name="two" value="2" OnClick="keypad.input.value = value">
+                    <input type="button" name="three" value="3" OnClick="keypad.input.value = value">
+                    <br>
+                    <input type="button" name="four" value="4" OnClick="keypad.input.value = value">
+                    <input type="button" name="five" value="5" OnClick="keypad.input.value = value">
+                    <input type="button" name="six" value="6" OnClick="keypad.input.value = value">
+                    <br>
+                    <input type="button" name="seven" value="7" OnClick="keypad.input.value = value">
+                    <input type="button" name="eight" value="8" OnClick="keypad.input.value = value">
+                    <input type="button" name="nine" value="9" OnClick="keypad.input.value = value">
+                    <br>
+                    <input type="button" name="star" value="*" OnClick="keypad.input.value = value">
+                    <input type="button" name="zero" value="0" OnClick="keypad.input.value = value">
+                    <input type="button" name="sharp" value="#" OnClick="keypad.input.value = value">
+                </td>
+
+            </tr>
+        </table>
+    </form>
+    <br>
+    <div id="pinCode">
+        <div id="first"></div>
+        <div id="second"></div>
+        <div id="third"></div>
+        <div id="fourth"></div>
+        <div id="fifth"></div>
+    </div>
+
+    <div id="login" style="display:none;">
+        <label>Your nickname</label>
+        <input type="text" id="log">
+        <br>
+        <label>Your password</label>
+        <input type="text" id="code">
+        <button onclick="check()" size="160px"></button>
+    </div>
+
+   <div id="winTable">
+        <script>
+            document.getElementById("winTable").innerHTML = localStorage.username + " won this game with scores: " + localStorage.credits;
+        </script>
+   </div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+body{
+    background-color: black;
+    font-family: Bahnschrift;
+}
+
+
+button{
+    background-color: lawngreen;
+    font-size: large;
+}
+
+#intro{
+
+    color: lawngreen;
+}
+
+.blocks{
+    font-size: 24px;
+    color: lawngreen;
+    float: left;
+    width: 200px;
+    margin:auto;
+}
+
+#keypad{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+#keypad *{
+    font-size: 24px;
+    color: #0c2912;
+}
+
+#keypad table {
+    border: solid 3px #31b52b;
+    border-spacing: 3px;
+    background-color: #1b7018;
+}
+
+#keypad table td {
+    border-spacing: 3px;
+}
+
+input.display {
+    text-align: center;
+    background-color: #c8ffc2;
+}
+
+td.buttons {
+    border-top: solid 1px #0f7a1a;
+    background-color: #85b481;
+}
+
+input[type= button] {
+    width: 40px;
+    height: 30px;
+}
+
+#pinCode{
+    font-size: 66px;
+    color: lawngreen;
+    float:right;
+}
+
+label{
+    color: #2dff25;
+}
+
+#credits{
+    float:right;
+}
+
+#winTable{
+    color: lawngreen;
+    font-size: 26px;
+}
