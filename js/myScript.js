@@ -17,8 +17,6 @@ function start() {
     for(var i = 0; i < 5; i++){
         password[i] = Math.floor(Math.random()*10);
     }
-
-    alert('ps = ' + password);
 }
 
 function inputNum(n){
@@ -27,12 +25,10 @@ function inputNum(n){
     for(var i = 0; i < password.length; i++){
         if(n == password[i]){
             color = almostColor;
-            credits += 50;
         }
     }
     if(n == password[counter]){
         color = rightColor;
-        credits += 100;
     }
 
     switch(counter) {
@@ -62,7 +58,11 @@ function inputNum(n){
             counter = 0;
             break;
     }
-    credits -= 100;
+    if(color === wrongColor){
+        credits -= 100;
+    } else if(color === almostColor){
+        credits -= 50;
+    }
     document.getElementById("credits").innerHTML = credits;
 
     if(credits <=0) {
